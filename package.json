@@ -2,8 +2,10 @@
 	"name": "syb",
 	"version": "1.0.0",
 	"scripts": {
-		"build": "webpack --progress --config webpack.config.build.js",
-		"development": "webpack serve --progress --config webpack.config.development.js",
+		"backend:build": "node app.js",
+		"backend:development": "nodemon app.js",
+		"frontend:build": "webpack --progress --config webpack.config.build.js",
+		"frontend:development": "webpack serve --progress --config webpack.config.development.js",
 		"start": "npm run development"
 	},
 	"author": "Mateusz Bernacki",
@@ -36,5 +38,9 @@
 		"webpack-cli": "^4.6.0",
 		"webpack-dev-server": "^3.11.2",
 		"webpack-merge": "^5.7.3"
+	},
+	"dependencies": {
+		"express": "^4.18.1",
+		"nodemon": "^2.0.16"
 	}
 }
