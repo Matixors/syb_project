@@ -6,7 +6,7 @@
 		"backend:development": "nodemon app.js",
 		"frontend:build": "webpack --progress --config webpack.config.build.js",
 		"frontend:development": "webpack serve --progress --config webpack.config.development.js",
-		"start": "npm run development"
+		"start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\""
 	},
 	"author": "Mateusz Bernacki",
 	"license": "ISC",
@@ -41,6 +41,7 @@
 	},
 	"dependencies": {
 		"express": "^4.18.1",
-		"nodemon": "^2.0.16"
+		"nodemon": "^2.0.16",
+		"pug": "^3.0.2"
 	}
 }
