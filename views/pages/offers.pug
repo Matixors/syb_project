@@ -1,0 +1,24 @@
+extends ../base.pug 
+
+block variables 
+  - var template = 'offers'
+
+block content 
+  .offers 
+    .offers__wrapper 
+      .offers__titles
+        each item in items
+          .offers__titles__title=item.data.title
+
+      .offers__gallery
+        .offers__gallery__wrapper
+          each item in items
+            each product in item.data.products
+              a.collection__gallery__link(href=Links(product.products_product))
+                figure.offers__gallery__media 
+                  img.offers__gallery__media__image(alt=product.products_product.data.image.alt src=product.products_product.data.image.url)
+      .collections__content 
+        each item in items
+          article.offers__article
+            h2.offers__article__title=item.data.title
+            p.offers__article__description=item.data.description
