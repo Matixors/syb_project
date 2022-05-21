@@ -8,10 +8,10 @@ block content
     .home__wrapper
       .home__titles
         each item in items
-          .offers__titles__title=item.data.title
+          .home__titles__title=item.data.title
 
       .home__gallery
         each media in home.data.gallery 
           figure.home__gallery__media
             img.home__gallery__image(alt=media.image.alt src=media.image.url)
-      a(href="/offers")="Nasze Oferty"
+      a.home__link(href="/offers")="Nasze Oferty"

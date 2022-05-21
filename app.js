@@ -36,6 +36,7 @@ const handleLinkResolver = (doc) => {
 }
 
 app.use(errorHandler())
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.use((req, res, next) => {
   res.locals.Links = handleLinkResolver
