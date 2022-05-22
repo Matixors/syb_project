@@ -18,7 +18,7 @@ block content
                 figure.offers__gallery__media 
                   img.offers__gallery__media__image(alt=product.products_product.data.image.alt src=product.products_product.data.image.url)
       .collections__content 
-        each item in items
-          article.offers__article
+        each item, index in items
+          article.offers__article(class=`${index === 0 ? 'offers__article--active' : ''}`)
             h2.offers__article__title=item.data.title
             p.offers__article__description=item.data.description
