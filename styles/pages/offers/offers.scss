@@ -11,18 +11,12 @@
     overflow: hidden;
 }
 .offers__titles{
-    position: absolute;
-    align-items: center;
-    display: flex;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
+    @extend %vertical-titles;
+
 }
 
 .offers__titles__title{
-    @extend %title-200;
-
-    padding-top: 2rem;
+    @extend %vertical-titles__title;
 }
 
 .offers__gallery{

@@ -1,0 +1,15 @@
+%vertical-titles{
+    position: absolute;
+    align-items: center;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+%vertical-titles__title{
+    @extend %title-200;
+
+    padding: 0 3rem;
+    padding-top: 2rem;
+}

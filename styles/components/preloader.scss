@@ -2,11 +2,12 @@
     @extend %cover;
     @extend %center;
 
-    align-items: center;
+    display: none;
     background: $color-contessa;
     color: $color-white;
-    display: none;
+    align-items: center;
     text-align: center;
+    z-index: z('preloader');
 }
 
 .preloader__text{

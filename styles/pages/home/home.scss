@@ -1,5 +1,34 @@
 .home{
-    
+    @extend %cover;
+    @extend %center;
+
+    align-items: center;
+    background: $color-contessa;
+    color: $color-white;
+    text-align: center;
+
+    &::before,
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        // top: 0;
+        height: 24rem;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &::before{
+        background: linear-gradient(to bottom, $color-contessa 0%,rgba($color-contessa,0) 100%);
+        top: 0;
+    }
+
+    &::after{
+        background: linear-gradient(to top, $color-contessa 0%,rgba($color-contessa,0) 100%);
+        bottom: 0;
+    }
+
+    overflow: hidden
 }
 
 .home__wrapper{
@@ -7,25 +36,47 @@
 }
 
 .home__titles{
-    
+    @extend %vertical-titles;
+
 }
 
 .home__titles__title{
-    
+    @extend %vertical-titles__title;
 }
 
 .home__gallery{
-    
+    @extend %cover;
+
 }
 
 .home__gallery__media{
-    
+    position: absolute;
+
+    width: 42rem;
+    height: 55rem;
+
+    //wymiary tymczasowe
 }
 
 .home__gallery__image{
-    
+    @extend %cover;
+
+    object-fit: cover;
 }
 
 .home__link{
+    @extend %description-14;
 
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
+    width: 29rem;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    z-index: 2;
 }
